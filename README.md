@@ -1,5 +1,5 @@
 # HypeMutationObserver
-![HypeDocumentLoader|690x487](https://playground.maxziebell.de/Hype/MutationObserver/HypeMutationObserver.png) 
+![HypeMutationObserver|690x487](https://playground.maxziebell.de/Hype/MutationObserver/HypeMutationObserver.png) 
 
 ![20190912-lbcbk|690x459](https://forums.tumult.com/uploads/db2156/original/3X/2/e/2e979e681be7fa9a8f5c21ab4ce0c108aaa727c7.png) 
 
@@ -12,7 +12,7 @@ If you use the new `updaterate` feature to limit the amount of triggers on your 
 
 Visual explanation of `updaterate`:
 ---
-![002|690x517](https://forums.tumult.com/uploads/db2156/original/3X/1/1/114a429fa71d89020931fae11e736bd2192c01c7.jpeg) 
+![HypeDocumentLoader|690x487](https://playground.maxziebell.de/Hype/MutationObserver/images/updaterate.jpg)
 
 PS: As seen on the right hand side of the visualization, the check against the `updaterate` is not always on the heartbeat of the interval. That is rather what Hype AnimationFrame is for. So if a mutation event falls inbetween to heartbeats (interval) and more time has passed then an interval, it gets fired. That also always sets up a *delayed timeout callback* to fire any cached mutations in the next interval as a final update.
 
