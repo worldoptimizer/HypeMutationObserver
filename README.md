@@ -18,6 +18,6 @@ PS: As seen on the right hand side of the visualization, the check against the `
 **Online Example:**  
 [HypeMutationObserver.html](https://playground.maxziebell.de/Hype/MutationObserver/HypeMutationObserver.html)
 
-**Version-History:** 
+**Version-History:**  
 `1.0	Initial release under MIT`  
 `1.1 Added support for Updaterate`
