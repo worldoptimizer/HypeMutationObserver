@@ -1,6 +1,6 @@
 # HypeMutationObserver
 ![HypeMutationObserver|690x487](https://playground.maxziebell.de/Hype/MutationObserver/HypeMutationObserver.png)
-<sup>The artwork is not hosted in this repository and copyrighted by Max Ziebell</sup>
+<sup>The cover artwork is not hosted in this repository and &copy;opyrighted by Max Ziebell</sup>
 
 ![20190912-lbcbk|690x459](https://forums.tumult.com/uploads/db2156/original/3X/2/e/2e979e681be7fa9a8f5c21ab4ce0c108aaa727c7.png) 
 
