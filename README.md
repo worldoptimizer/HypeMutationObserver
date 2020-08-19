@@ -22,6 +22,7 @@ This extension called Hype MutationObserver, is a wrapper to [MutationObserver](
 	}, { 
     id:'test', /* ID for managing, defaults to callback if not anonymous */
     updaterate: 30, /* 1-60 optional limit for updates per second */
+    scope: window,	/* defines scope of execution, defaults to hypeDocument */
 
     /* All options discussed at https://developer.mozilla.org/en-US/docs/Web/API/MutationObserverInit work here */
     attributes: true, 
