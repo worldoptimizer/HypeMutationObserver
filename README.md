@@ -2,22 +2,52 @@
 ![HypeMutationObserver|690x487](https://playground.maxziebell.de/Hype/MutationObserver/HypeMutationObserver.jpg)
 <sup>The cover artwork is not hosted in this repository and &copy;opyrighted by Max Ziebell</sup>
 
-![20190912-lbcbk|690x459](https://forums.tumult.com/uploads/db2156/original/3X/2/e/2e979e681be7fa9a8f5c21ab4ce0c108aaa727c7.png) 
+### Usage
 
 This extension called Hype MutationObserver, is a wrapper to [MutationObserver](https://developer.mozilla.org/de/docs/Web/API/MutationObserver). It allows to observer elements and act upon changes on their attributes, childlist and subtree.  This Hype specific wrapper takes care to register and unregister the observer. It also helps in keeping the callback mutation events scene specific and offers an update rate feature.
 
-Use  `updaterate`  on the config object to set it up.
-If you use the new `updaterate` feature to limit the amount of triggers on your mutation code, the extension also takes care to apply the first inital update and the last update. If you don't want that you can disable them using the config keys `disableInitialUpdate` and `disableFinalUpdate`
+**Basic usage:**
 
-Visual explanation of `updaterate`:
----
-![HypeDocumentLoader|690x487](https://playground.maxziebell.de/Hype/MutationObserver/images/updaterate.jpg)
+``` javascript
+	hypeDocument.startMutationObserver(element, function(mutation){
+		// your code goes here and executes whenever the style attribute changes
+	}, { attributes: true, attributeFilter: [ "style"]});
+```
 
-PS: As seen on the right hand side of the visualization, the check against the `updaterate` is not always on the heartbeat of the interval. That is rather what Hype AnimationFrame is for. So if a mutation event falls inbetween to heartbeats (interval) and more time has passed then an interval, it gets fired. That also always sets up a *delayed timeout callback* to fire any cached mutations in the next interval as a final update.
+**Advanced usage (with all options):**
+
+``` javascript
+	hypeDocument.startMutationObserver(element, function(mutation){
+		// your code goes here and executes whenever the style attribute changes
+	}, { 
+    id:'test', /* ID for managing, defaults to callback if not anonymous */
+    updaterate: 30, /* 1-60 optional limit for updates per second */
+
+    /* All options discussed at https://developer.mozilla.org/en-US/docs/Web/API/MutationObserverInit work here */
+    attributes: true, 
+    attributeFilter: [ "stroke-dashoffset" ], 
+    attributeOldValue: true 
+  });
+```
+
+**Hints on using the updaterate**:
+
+Use  `updaterate`  on the config object to set it up. If you use the  `updaterate` feature to limit the amount of triggers on your mutation code, the extension also takes care to apply the first inital update and the last update. If you don't want that you can disable them using the config keys `disableInitialUpdate` and `disableFinalUpdate`
+
+**Further reads:**
+
+https://developer.mozilla.org/de/docs/Web/API/MutationObserver
 
 **Online Examples:**  
 [HypeMutationObserver.html](https://playground.maxziebell.de/Hype/MutationObserver/HypeMutationObserver.html)
 [Magnification Lens](https://forums.tumult.com/t/magnification-lens/17093?u=maxzieb)
+
+Visual explanation of `updaterate`:
+---
+
+![HypeDocumentLoader|690x487](https://playground.maxziebell.de/Hype/MutationObserver/images/updaterate.jpg)
+
+PS: As seen on the right hand side of the visualization, the check against the `updaterate` is not always on the heartbeat of the interval. That is rather what Hype AnimationFrame is for. So if a mutation event falls inbetween to heartbeats (interval) and more time has passed then an interval, it gets fired. That also always sets up a *delayed timeout callback* to fire any cached mutations in the next interval as a final update.
 
 
 **Version-History:**  
