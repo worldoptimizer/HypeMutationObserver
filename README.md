@@ -33,7 +33,7 @@ This extension called Hype MutationObserver, is a wrapper to [MutationObserver](
 
 **Hints on using the updaterate**:
 
-Use  `updaterate`  on the config object to set it up. If you use the  `updaterate` feature to limit the amount of triggers on your mutation code, the extension also takes care to apply the first inital update and the last update. If you don't want that you can disable them using the config keys `disableInitialUpdate` and `disableFinalUpdate`
+Use  `updaterate`  on the config object to set it up. If you use the  `updaterate` feature to limit the amount of triggers on your mutation code, the extension also takes care to apply the first initial update and the last update. If you don't want that you can disable them using the config keys `disableInitialUpdate` and `disableFinalUpdate`
 
 **Further reads:**
 
