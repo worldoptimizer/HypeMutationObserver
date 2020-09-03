@@ -20,15 +20,14 @@ This extension called Hype MutationObserver, is a wrapper to [MutationObserver](
 	hypeDocument.startMutationObserver(element, function(mutation){
 		// your code goes here and executes whenever the style attribute changes
 	}, { 
-    id:'test', /* ID for managing, defaults to callback if not anonymous */
-    updaterate: 30, /* 1-60 optional limit for updates per second */
-    scope: window,	/* defines scope of execution, defaults to hypeDocument */
-
-    /* All options discussed at https://developer.mozilla.org/en-US/docs/Web/API/MutationObserverInit work here */
-    attributes: true, 
-    attributeFilter: [ "stroke-dashoffset" ], 
-    attributeOldValue: true 
-  });
+		id:'test', /* ID for managing, defaults to callback if not anonymous */
+		updaterate: 30, /* 1-60 optional limit for updates per second */
+		scope: window,	/* defines scope of execution, defaults to hypeDocument */
+		/* All options discussed at https://developer.mozilla.org/en-US/docs/Web/API/MutationObserverInit work here */
+		attributes: true, 
+		attributeFilter: [ "stroke-dashoffset" ], 
+		attributeOldValue: true 
+	});
 ```
 
 **Hints on using the updaterate**:
